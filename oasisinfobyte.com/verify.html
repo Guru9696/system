@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="css2/styles.css">
+    <link rel="stylesheet" href="css2/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src=""></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <title>Certificate Verification</title>
+<body>
+  <header class="header">
+
+    <a href="#" class="logo"><i class="fas fa-chart-pie"></i>OASIS INFOBYTE</a>
+
+
+    <div class="fas fa-bars"></div>
+
+
+  </header>
+
+  <div class="container">
+    <div class="title">Certificate Verification</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <!-- <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" id="uname" placeholder="Enter your username" required>
+          </div> -->
+          <div class="input-box">
+            <span class="details">Certificate Id</span>
+            <input type="text" id="cid" placeholder="Enter your certificate id" required="" autocomplete="off">
+          </div>
+          </div>
+       
+        </form></div>
+        <button id="btncls" class="buttonload" onclick="validate()">
+          Verify
+        </button>
+      
+    </div>
+  
+
+
+<script>
+  function verified(){
+          location.href= './validated.html';
+        }
+
+function validate(){
+  var x = document.getElementById("cid").value.toLowerCase();
+if(!x){
+  alert("Certificate Id cannot be empty");
+}
+else{
+  confirm("Do you want to confirm")
+ var btn = document.getElementById("btncls");
+ btn.innerHTML ='<i class="fa fa-spinner fa-spin"></i> Loading';
+ var ind = x.indexOf("/ip");
+ var ind2 = x.indexOf("oib/");
+  if((x.length > 9 && x.length < 14 ) && (x.includes('oib/')) && (x.includes("/ip")) && (ind == 6) && (ind2 == 0)){
+      // location.href("https://github.com/felleslosninger/efm-certvalidator");
+      const tout = setTimeout(verified,4000);
+
+   }
+//     var re = new RegExp("^[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}[0-9]{4}[a-zA-Z]{1}$");
+//     if(re.test(x)){
+//   const tout = setTimeout(verified,4000);
+// }
+
+  
+  else{
+    const itout = setTimeout(() => {
+      alert("Your Certificate in not verified");
+    location.reload();
+    }, 4000);
+    
+  }
+
+}
+
+}
+</script>
+
+</body></html>

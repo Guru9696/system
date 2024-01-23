@@ -1,0 +1,279 @@
+body{
+  /* background: rgb(255, 255, 255) ; */
+  background-color: #fde7f9;
+  background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
+
+  
+  
+
+}
+
+/* Header */
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding:1rem 2rem;
+  position: fixed;
+  top:0; left: 0;
+  z-index: 100;
+
+}
+
+.header .logo{
+  font-size: 2.0rem;
+ color: rgb(91, 73, 197);
+text-decoration: none;
+  
+}
+
+.header .logo i{
+  padding:0 .5rem;
+}
+
+.header .navbar ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header .navbar ul li{
+  margin:0 1.5rem;
+}
+
+.header .navbar ul li a{
+  font-size: 1.6rem;
+  color:#fff;
+}
+
+.header .navbar ul li a:hover{
+  color:#ccc;
+}
+
+
+
+.header .fa-bars{
+  color:#fff;
+  cursor: pointer;
+  font-size: 3rem;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+    z-index: 1;
+  }
+  
+  .contentBox{
+
+      text-align: center;
+      padding: 20px;
+      padding-top: 36px;
+    width: 600px;
+    height: 400px;
+    background: rgb(227, 238, 241);
+    border-radius: 20px;
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .icon{
+    margin: 5px 0px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #34f234;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 60px;
+   
+  }
+
+  .icon i.fa{
+    font-size: 30px;
+    color: #34f234;
+  }
+
+  .icon img{
+    height: 42px;
+    margin-top: 8px;
+  }
+  
+  /* .contentBox .imgBx{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  /* .contentBox .imgBx::before{
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #e7ffe0;
+    border-radius: 50%;
+    
+  }
+  
+  .contentBox .imgBx img{
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+  
+  
+  } */
+  
+  .contentBox .content{
+    height: auto;
+      text-align: center;
+      padding: 20px;
+      padding-top: 36px;
+  
+  }
+  
+  .contentBox .content h3{
+   
+    color: #333;
+    line-height: 1em;
+    font-weight: 400;
+    font-size: 2.5em;
+  }
+  
+  .contentBox .content p{
+    font-size: 1.25em;
+    font-weight: 300;
+    padding: 12px 2px;
+  
+  }
+  
+  .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f3f3f3 url(icons8-close-50.png); 
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position:center;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  
+  
+  @media (max-width: 767px){
+
+    
+
+
+    .contentBox{
+      width: 300px;
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .contentBox .imgBx{
+      height: 200px;
+      transform: translateY((-50px));
+    }
+  
+    .contentBox .imgBx ::before{
+      background: #fff;
+    }
+  
+    .contentBox .content{
+      height: auto;
+      text-align: center;
+      padding: 20px;
+      padding-top: 36px;
+    }
+  
+    .close{
+      top: -50px;
+      right: -10px;
+      background: #fff url(icons8-close-50.png); 
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position:center;
+    }
+
+    #preloader{
+      background: #CAD5F3  url('../images/reload.gif') no-repeat center;
+      background-size:80% ;
+      max-width: 100%;
+      height: auto;
+  
+    }
+
+    
+  }
+  
+  #my-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* z-index: 100000; */
+  }
+  
+  /* preloader */
+
+  #preloader{
+    background: #CAD5F3  url('../images/reload.gif') no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    background-size:50% ;
+ 
+
+  }
+
+.button {
+   height: 45px;
+   cursor:pointer;
+   
+ }
+ .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+
+
+  

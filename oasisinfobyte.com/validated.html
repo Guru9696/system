@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validated Certificate</title>
+    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ <div id="preloader"></div>
+
+
+  <canvas id="my-canvas"></canvas>
+
+  <div class="main">
+    <header class="header">
+
+      <a href="#" class="logo"><i class="fas fa-chart-pie"></i>OASIS INFOBYTE</a>
+
+
+      <div class="fas fa-bars"></div>
+
+
+      
+
+
+    </header>
+    <div class="popup">
+     
+        <div class="contentBox">
+         
+          <div class="content">
+            <!-- <div class="icon">
+              <i class="fa fa-check"></i>
+            </div> -->
+
+            <div class="icon"><img src="images/checkmark.gif" alt=""></div>
+
+            <div>
+
+              <h3>Your Document Is Verified.</h3>
+              <p>The Candidate Have Successfully Completed Six Month Virtual Internship Under Oasis Infobyte</p>
+                          
+            </div>
+            <div class="button">
+              <input type="submit" value="Verify Certificate" onclick="location.href = './verify.html';">
+            </div>
+            
+          </div>
+
+        </div>
+        <script src="js/index.min.js"></script>
+        <script>var confettiSettings = { target: 'my-canvas' };
+          var confetti = new ConfettiGenerator(confettiSettings);
+         
+          const startit = () =>{
+                setTimeout(function(){
+                console.log("start");
+                confetti.render();
+                }, 2000);
+              };
+
+              const stopit = () =>{
+                setTimeout(function(){
+                console.log("start");
+                confetti.clear();
+                }, 8000);
+              };
+
+              var loader = document.getElementById("preloader");
+
+              const loading = () =>{
+                setTimeout(() => {
+                  loader.style.display="none";
+                }, 2000);
+              }
+              loading();
+              startit();
+                stopit();
+          </script>
+
+</div></div></body></html>
