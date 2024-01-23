@@ -172,7 +172,7 @@ $.ajax({
   },
   error: function (reject, ajaxOptions, thrownError) {
     if (reject.status === 403 || reject.status === 404) {
-      location.href = "https://truecertificates.com/";
+      location.href = "#";
     }
   },
   timeout: 15000, //timeout of the ajax call
